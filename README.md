@@ -9,11 +9,11 @@ The simple-ansible-inventory.py script can be installed as a role from requireme
 
 Symlink example:
 
-`
+```
 cd inventory
 
 ln -sf ../roles/simple-ansible-inventory/simple-ansible-inventory.py simple-ansible-inventory.py
-`
+```
 
 ## Prerequisites
 
