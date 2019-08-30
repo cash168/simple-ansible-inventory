@@ -2,6 +2,7 @@
 
 import logging
 import os
+import sys
 import argparse
 import yaml
 import json
@@ -208,8 +209,9 @@ def find_inventory_files():
     inventory_files = list()
     LOGGER.debug("Looking for inventory files")
     # script py path
-    script_path = os.path.realpath(__file__)
-    inventories_path = os.path.dirname(script_path)
+    pathname = os.path.dirname(sys.argv[0])
+    script_path = os.path.abspath(pathname)
+    inventories_path = os.path.abspath(pathname)
     # walking through script folder looking for yaml files
     for root, dirnames, filenames in os.walk(inventories_path):
         LOGGER.debug("All files found: " + str(filenames))

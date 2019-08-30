@@ -3,6 +3,17 @@
 The idea is to keep an Ansible inventory simple, clean and easily readable.
 Each host will only have to be written one time and you'll not have to define each group before using it.
 
+You can keep one instance of the script and reuse it through symlink.
+
+The simple-ansible-inventory.py script can be installed as a role from requirements.yml and reuse through symlink.
+
+Symlink example:
+
+`
+cd inventory
+ln -sf ../roles/simple-ansible-inventory/simple-ansible-inventory.py simple-ansible-inventory.py
+`
+
 ## Prerequisites
 
 Simple Ansible Inventory works with python2 and python3.
